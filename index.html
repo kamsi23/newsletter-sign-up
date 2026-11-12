@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Newsletter Sign-up</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="min-h-screen bg-[#36384e] flex items-center justify-center">
+    <!--======================================SIGN-UP FORM START===================================== -->
+    <div
+      id="signup-card"
+      class="w-full max-w-[930px] min-h-[620px] bg-white flex flex-col-reverse md:flex-row items-center justify-between gap-6 p-0 md:p-6 rounded-none md:rounded-[30px]"
+    >
+      <div class="w-full md:w-1/2 px-6 pb-10 md:p-6">
+        <h1 class="text-[var(--Blue800)] text-4xl md:text-5xl font-bold mb-6">
+          Stay updated!
+        </h1>
+
+        <p class="text-[var(--Blue800)] mb-6">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+
+        <!-- BENEFITS -->
+        <div class="flex flex-col gap-4 mb-8">
+          <p class="flex items-start gap-3 text-[var(--Blue800)]">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <span>Product discovery and building what matters</span>
+          </p>
+
+          <p class="flex items-start gap-3 text-[var(--Blue800)]">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <span>Measuring to ensure updates are a success</span>
+          </p>
+
+          <p class="flex items-start gap-3 text-[var(--Blue800)]">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <span>And much more!</span>
+          </p>
+        </div>
+
+        <!-- SIGN-UP FORM -->
+        <form id="signup-form" novalidate>
+          <div class="flex items-center justify-between gap-3 mb-2">
+            <label
+              for="email"
+              class="text-[var(--Blue800)] text-[12px] font-bold"
+            >
+              Email address
+            </label>
+
+            <span
+              id="error-message"
+              class="hidden text-[#ff6257] text-[12px] font-bold"
+              aria-live=""
+            >
+              Valid email required
+            </span>
+          </div>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@company.com"
+            class="w-full h-14 px-5 rounded-lg border border-[var(--Gray)] text-[var(--Blue800)] mb-6 placeholder:text-[var(--Gray)]"
+          />
+
+          <button
+            type="submit"
+            class="w-full min-h-14 px-4 py-4 rounded-lg bg-[#242742] text-white font-bold hover:bg-linear-to-r hover:from-[#ff527b] hover:to-[#ff6257] cursor-pointer"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <div class="block w-full md:hidden">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+        </div>
+
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt=""
+          class="hidden w-full md:block"
+        />
+      </div>
+    </div>
+
+    <!--================================= SUCCESS MESSAGE START============================================= -->
+    <div
+      id="success-message"
+      class="hidden w-full max-w-[500px] min-h-screen md:min-h-0 bg-white md:rounded-[30px] p-8 md:p-12 flex flex-col justify-between"
+      aria-labelledby="success-title"
+      aria-live=""
+    >
+      <div class="mt-24 md:mt-0">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          class="w-16 h-16 mb-8"
+        />
+
+        <h2
+          id="success-title"
+          class="text-[var(--Blue800)] text-4xl md:text-5xl font-bold mb-6"
+        >
+          Thanks for subscribing!
+        </h2>
+
+        <p class="text-[var(--Blue800)]">
+          A confirmation email has been sent to
+
+          <strong id="user-email"></strong>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+      </div>
+
+      <button
+        id="dismiss-button"
+        type="button"
+        class="w-full min-h-14 px-4 py-4 mt-10 rounded-lg bg-[#242742] text-white font-bold hover:bg-linear-to-r hover:from-[#ff527b] hover:to-[#ff6257] cursor-pointer"
+      >
+        Dismiss message
+      </button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+<!-- Join 60,000+ product managers receiving monthly updates on:
+
+  Product discovery and building what matters
+  Measuring to ensure updates are a success
+  And much more!
+
+  Email address
+  email@company.com
+
+  Subscribe to monthly newsletter -->
+
+<!-- Sign-up form end -->
+
+<!-- Success message start -->
+
+<!-- Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message -->
+
+<!-- Success message end -->
+
+<!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
